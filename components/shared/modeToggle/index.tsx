@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import {
@@ -33,7 +33,7 @@ const IconsMap = {
   [ThemeType.Light]: <SunIcon />,
 };
 
-const Icon: FC<Icon> = ({ theme }) => IconsMap[theme] || <SunIcon />;
+const Icon = ({ theme }: Icon) => IconsMap[theme] || <SunIcon />;
 
 interface Checkbox {
   label: keyof typeof ThemeType;
@@ -47,7 +47,7 @@ const checkboxes: Checkbox[] = Object.entries(ThemeType).map(
   })
 );
 
-const ModeToggle: FC = () => {
+const ModeToggle = () => {
   const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
 
