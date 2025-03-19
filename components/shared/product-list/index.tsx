@@ -1,5 +1,5 @@
-import { Product } from "@/db/sample-data";
-import { ProductCard } from "..";
+import { Product } from '@/types';
+import { ProductCard } from '..';
 
 interface ProductList {
   data: Product[];
