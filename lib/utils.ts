@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const converToPlainObject = <T>(value: T): T => {
+export const convertToPlainObject = <T>(value: T): T => {
   return JSON.parse(JSON.stringify(value));
 };
 
